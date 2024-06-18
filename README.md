@@ -6,8 +6,6 @@
 
 </div>
 
----
-
 <div align="center">
 
 # Trabalho de Estatística - P2
@@ -16,8 +14,6 @@
 # 2024
 
 </div>
-
----
 
 <div align="center">
 
@@ -31,8 +27,6 @@
 <h3>Ralph dos Santos Souza</h3>
 
 </div>
-
----
 
 <p align="center">
 Este trabalho consiste no desenvolvimento de uma aplicacao em Django que calcule a <b>Distribuicão Uniforme</b><br>
