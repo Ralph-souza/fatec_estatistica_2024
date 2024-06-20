@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import uniform_distribution
+from .views import calculate
 
 
 urlpatterns = [
-    path('', uniform_distribution, name='uniform_distribution'),
+    path('', calculate, name='calculate'),
 ]

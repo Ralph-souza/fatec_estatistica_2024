@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Cálculo de Estatística - Distribuição Uniforme</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="value_a">Valor A: </label>
+        <input type="number" step="any" id="value_a" name="value_a" required><br>
+
+        <label for="value_b">Valor B: </label>
+        <input type="number" step="any" id="value_b" name="value_b" required><br>
+
+        <label for="value_c">Valor C: </label>
+        <input type="number" step="any" id="value_c" name="value_c"><br>
+
+        <label for="value_d">Valor D: </label>
+        <input type="number" step="any" id="value_d" name="value_d"><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if result.average is not None %}
+        <h2>Resultados</h2>
+        <p>Média: {{ result.average }}</p>
+        <p>Variância: {{ result.variancy }}</p>
+        <p>Desvio Padrão: {{ result.standard_deviation }}</p>
+        <p>Coeficiente de Variação: {{ result.coefficient_variation }}</p>
+
+        {% if result.probability %}
+            <p>Probabilidade: {{ result.probability }}</p>
+        {% endif %}
+
+    {% endif %}
+    
+{% endblock %}
