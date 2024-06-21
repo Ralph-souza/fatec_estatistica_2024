@@ -1,34 +1,63 @@
-<div align="center">
+# TRABALHO DE ESTATÍSTICA - TERCEIRO SEMESTRE
 
-# CENTRO ESTADUAL DE FORMACÃO TECNOLÓGICA PAULA SOUZA
-## Faculdade de Tecnologia de Jundiaí 
-### Curso Superior de Tecnologia em Gestão da Tecnologia da Informacão
+**FATEC CAMPUS JUNDIAÍ - DEPUTADO ARY FOSSEN (2024)**
 
-</div>
+Este é um trabalho de conclusão de semestre para a matéria de **ESTATÍSTICA** ministrada pelo professor:<br><br>
 
-<div align="center">
+**JOÃO CARLOS DOS SANTOS**
 
-# Trabalho de Estatística - P2
-## Distribuicão Uniforme
-# Jundiaí
-# 2024
+O mesmo tem como participantes no seu desenvolvimento os seguintes alunos:<br><br>
 
-</div>
+**GUSTAVO HENRIQUE KLINGER AMADI**<br>
+**KAIQUE BARADEL GUARDA**<br>
+**JOÃO PAULO MARCHETTI VECINA**<br>
+**RALPH DOS SANTOS SOUZA**<br><br>
 
-<div align="center">
+---
+**FOCO DO PROJETO**<br><br>
 
-## Docente
-<h3>João Carlos dos Santos</h3>
+O foco da aplicação está no cálculo da **DISTRIBUIÇÃO UNIFORME**, avaliando pontos como:<br><br>
 
-## Integrantes
-<h3>Gustavo Henrique Klinger Amadi</h3>
-<h3>João Paulo Marchetti Vecina</h3>
-<h3>Kaique Baradel Guarda</h3>
-<h3>Ralph dos Santos Souza</h3>
+* Média
+* Variância
+* Desvio Padrão
+* Coeficiente de Variação
+* Probabilidade<br><br>
 
-</div>
+---
 
-<p align="center">
-Este trabalho consiste no desenvolvimento de uma aplicacao em Django que calcule a <b>Distribuicão Uniforme</b><br>
-de maneira dinâmica através da insercão de dados pelo usuário.
-</p>
+**EXECUTANDO A APLICAÇÃO**<br><br>
+
+Após clonagem será necessário a criação de uma máquina virtual através do terminal.<br>
+*OBS: Os dados descritos a seguir visam esclarecer o passo a passo para execução em ambiente LINUX*<br><br>
+
+```
+$ python3 -m venv <nome da máquina virtual>
+```
+
+Para acessar a mesma basta aplicar o seguinte comando a seguir.
+
+```
+$ source <nome da máquina virtual>/bin/activate
+```
+
+Em seguida será necessário a instalação dos componentes necessários para a execução da mesma.<br>
+Para isso basta executar o seguinte comando.
+
+```
+$ pip install -r requirements.txt
+```
+
+Em seguida basta rodar a migração do **DJANGO** através do seguinte comando.
+
+```
+$ ./manage.py migrate
+```
+
+*OBS: Como o projeto não possui modelos não será necessário criar as migrações, basta apenas a execução das migrações de base do projeto*<br><br>
+
+Agora podemos executar o mesmo atraés do comando:
+
+```
+./manage.py runserver
+```
