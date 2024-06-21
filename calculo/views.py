@@ -52,8 +52,8 @@ def calculate(request):
         value_d = form.cleaned_data['value_d']
 
         result['average'] = f"{get_average(value_a, value_b):.2f}"
-        result['variancy'] = f"{get_variancy(value_a, value_b):.4f}"
-        result['standard_deviation'] = f"{get_standard_deviation(value_a, value_b):.4f}"
+        result['variancy'] = f"{get_variancy(value_a, value_b):.2f}"
+        result['standard_deviation'] = f"{get_standard_deviation(value_a, value_b):.2f}"
         result['coefficient_variation'] = f"{get_coefficient_variation(value_a, value_b):.2f}%"
 
         if value_c is not None and value_d is not None:

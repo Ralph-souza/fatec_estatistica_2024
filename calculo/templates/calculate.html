@@ -8,15 +8,43 @@
         {% csrf_token %}
         <label for="value_a">Valor A: </label>
         <input type="number" step="any" id="value_a" name="value_a" required><br>
+        {% if form.value_a.errors %}
+            <div class="error">
+                {% for error in form.value_a.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
 
         <label for="value_b">Valor B: </label>
         <input type="number" step="any" id="value_b" name="value_b" required><br>
+        {% if form.value_b.errors %}
+            <div class="error">
+                {% for error in form.value_b.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
 
         <label for="value_c">Valor C: </label>
         <input type="number" step="any" id="value_c" name="value_c"><br>
+        {% if form.value_c.errors %}
+            <div class="error">
+                {% for error in form.value_c.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
 
         <label for="value_d">Valor D: </label>
         <input type="number" step="any" id="value_d" name="value_d"><br>
+        {% if form.value_d.errors %}
+            <div class="error">
+                {% for error in form.value_d.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
 
         <button type="submit">Calcular</button>
     </form>
