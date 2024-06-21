@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    margin: 100px 0;
+    padding: 50px;
+    height: 100%;
+}
+
+.app-content h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #303030;
+    margin-bottom: 10px;
+}
+
+.app-content h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #303030;
+    margin-bottom: 50px;
+}
+
+.app-content form label {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #303030;
+}
+
+.app-content form input {
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.app-content form input:focus {
+    outline: none;
+    border: 2px solid rgba(32, 80, 103, 0.5);
+}
+
+.app-content .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.app-content button {
+    border: none;
+    border-radius: 20px;
+    background-color: #303030;
+    padding: 10px 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #e9e9e9;
+    transition: .2s ease-in-out 0s;
+}
+
+.app-content button:hover {
+    transform: scale(1.1);
+    color: #303030;
+    background-color: #e9e9e9;
+    border: 2px solid #303030;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.app-content .results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-content .results h2 {
+    margin: 50px 0 15px 0;
+}
+
+.app-content .results p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.app-content .error {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: red;
+}
