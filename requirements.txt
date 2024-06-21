@@ -6,7 +6,7 @@ distlib==0.3.7
 Django==3.2.25
 django-extensions==3.2.1
 django-shell-plus==1.1.7
-Faker==16.6.1
+Faker==14.2.1
 filelock==3.12.4
 identify==2.5.28
 iniconfig==2.0.0
