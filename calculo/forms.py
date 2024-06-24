@@ -14,12 +14,21 @@ class CalculationForm(forms.Form):
         value_c = cleaned_data.get('value_c')
         value_d = cleaned_data.get('value_d')
 
-        if value_a is not None and value_b is not None and value_a > value_b:
-            self.add_error('value_a', 'Valor A deve ser menor ou igual a Valor B.')
-            self.add_error('value_b', 'Valor B deve ser maior ou igual a Valor A.')
+        if value_a is not None and value_b is not None:
+            if value_a > value_b:
+                self.add_error('value_a', 'Valor A deve ser menor ou igual a Valor B.')
+                self.add_error('value_b', 'Valor B deve ser maior ou igual a Valor A.')
         
-        if value_c is not None and value_d is not None and value_c > value_d:
-            self.add_error('value_c', 'Valor C deve ser menor ou igual a Valor D.')
-            self.add_error('value_d', 'Valor D deve ser maior ou igual a Valor C.')
+        if value_c is not None and value_d is not None:
+            if value_c > value_d:
+                self.add_error('value_c', 'Valor C deve ser menor ou igual a Valor D.')
+                self.add_error('value_d', 'Valor D deve ser maior ou igual a Valor C.')
+
+        if value_c is not None and value_a is not None:
+            if value_c < value_a:
+                self.add_error('value_c', 'Valor C deve ser maior que Valor A.')
+        if value_d is not None and value_b is not None:
+            if value_d > value_b:
+                self.add_error('value_d', 'Valor D deve ser menor que Valor B.')
         
         return cleaned_data

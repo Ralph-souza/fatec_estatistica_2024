@@ -8,6 +8,15 @@
 
         <form method="post">
             {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="error">
+                    {% for error in form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
             <label for="value_a">Valor A: </label>
             <input type="number" step="any" id="value_a" name="value_a" required><br>
             {% if form.value_a.errors %}
